@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'spring-boot'
+include 'gateway'
+
+include 'moduleNotfication'
+include 'moduleNotfication:mn-domain'
+include 'moduleNotfication:mn-infra'
+
+include 'base'
+include 'base:base-internal'
+include 'base:base-external'
+
+include 'moduleCustomer'
+

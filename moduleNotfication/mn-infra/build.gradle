@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':moduleNotfication:mn-domain')
+    implementation project(':base:base-external')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}

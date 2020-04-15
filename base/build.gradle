@@ -1,0 +1,4 @@
+dependencies {
+    api project(':base:base-internal')
+    api project(':base:base-external')
+}

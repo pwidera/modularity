@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE' apply false
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+ext {
+	apply from: 'properties.gradle'
+}
+
+group = 'pl.moduleApp'
+version = '0.0.1-SNAPSHOT'
+
+
+allprojects {
+	apply plugin: 'java-library'
+	apply plugin: 'io.spring.dependency-management'
+
+	repositories {
+		mavenCentral()
+	}
+
+	sourceCompatibility = '1.8'
+	targetCompatibility = '1.8'
+
+	dependencyManagement {
+		imports {
+			mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+		}
+	}
+}
